@@ -1,6 +1,254 @@
 <html>
 <head>
-<link rel="stylesheet" type = "text/css" href="StyleSheet.css">
+<style>
+	@keyframes buttoncol{
+    	from {background-color:#121317;}
+        to {background-color: rgba(200,200,200,1);}
+    }
+    @keyframes revbuttoncol{
+    	from {background-color:rgba(200,200,200,1);}
+        to {background-color:black;}
+    }
+    @keyframes shownav{
+    	from {width:20px;}
+    	to {width:200px;}
+    }
+    @keyframes hidenav{
+    	from {width:200px;}
+    	to {width:20px;}
+    }
+    @keyframes fadein{
+    	from {opacity:0;}
+        to {opacity:1;}
+    }
+@keyframes buttoncol2{
+	from {background-color:blue;width:200px;height:60px;}
+	to {background-color:#001a9e;width:250px;height:80px;}
+}
+@keyframes revbuttoncol2{
+	from {background-color:#001a9e;width:250px;height:80px;}
+	to {background-color:blue;width:200px;height:60px;}
+}
+@keyframes buttoncol3{
+	from {background-color:#637dff;width:150px;height:50px;}
+	to {background-color:#001a9e;width:180px;height:60px;}
+}
+@keyframes revbuttoncol3{
+	from {background-color:#001a9e;width:180px;height:60px;}
+	to {background-color:#637dff;width:150px;height:50px;}
+}
+    html, body {
+    	margin: 0;
+    	padding: 0;
+	}
+    html {
+  		scroll-behavior: smooth;
+	}
+body{
+	background-color:white;
+}
+    img {
+  		width: 100%;
+  		height: auto;
+	}
+	a{
+border-radius:4px;color:blue;text-decoration:none;
+}
+#textbutton{
+	;
+}
+a:hover{background-color:white;}
+    .parallax {
+  		background-image: url("https://extension.unh.edu/sites/default/files/styles/2x_blog_main/public/field/image/maple-tree-in-park-110661300191011Zru.jpg?itok=Ma4-jMXY&timestamp=1567092160");
+ 		height: 80%;
+		min-height:700px;
+  		background-attachment: fixed;
+ 		background-position: center;
+    	background-repeat: no-repeat;
+  		background-size: cover;
+        z-index:-1;
+        text-align:center;
+        color:white;
+        font-weight:900;
+        font-family:Impact, Charcoal, sans-serif;
+        padding:200px 0;
+        opacity:0.9;
+        font-size:55;
+	}
+    #topbutton{
+    	z-index:500;
+        background-color:white;
+        color:grey;
+        border-radius:50%;
+        width:22px;
+        height:22px;
+        right:50px;
+        bottom:20px;
+        border:1px black solid;
+        float:right;
+        position:sticky;
+        Display:inline-block;
+        text-align:center;
+        text-decoration:none;
+    }
+	.bar{
+        color:white;
+        Background-color:black;
+        position:sticky;
+        top:0px;
+        z-index:1001;
+        width:100%;
+        height:40px;
+        box-shadow:5px 5px 20px 10px rgba(255,255,255,0.5);
+    }
+    .barbutton{
+    	font-size:18px;
+        background-color:#121317;
+        width:130px;
+        height:40px;
+        color:white;
+        font-family: Verdana;
+        z-index:1002;
+        display:inline-block;
+        float:right;
+        border: 0px white solid;
+        animation:forwards revbuttoncol 0.5s 1;
+	border-right: 1px solid white;
+    }
+.barbutton:hover{
+    	animation:forwards buttoncol 0.5s 1;
+        color:#121317;
+    }
+.barbutton2{
+    	font-size:18px;
+        background-color:#121317;
+        width:130px;
+        height:40px;
+        color:white;
+        font-family: Verdana;
+        z-index:3;
+	border:none;
+        display:block;
+        animation:forwards revbuttoncol 0.5s 1;
+	position:absolute;
+    }
+    .barbutton2:hover{
+    	animation:forwards buttoncol 0.5s 1;
+        color:#121317;
+    }
+.actionbutton{
+	font-size:24px;
+	font-family:Verdana;
+	line-height:60px;
+	background-color:blue;
+	margin:0px auto;
+	float:none;
+	display:inline-block;
+	width:200px;
+	height:60px;
+	animation:forwards revbuttoncol2 0.5s 1;
+	color:white;
+	border:none;
+	font-family:"Century Gothic", CenturyGothic, AppleGothic, sans-serif;;
+	font-weight:bold;
+}
+.actionbutton:hover{
+	animation:forwards buttoncol2 0.5s 1;
+}
+.actionbutton2{
+	font-size:18px;
+	font-family:Verdana;
+	line-height:50px;
+	background-color:#637dff;
+	margin:0px auto;
+	float:none;
+	display:inline-block;
+	width:150px;
+	height:50px;
+	animation:forwards revbuttoncol3 0.5s 1;
+	color:white;
+	border:none;
+	font-family:"Century Gothic", CenturyGothic, AppleGothic, sans-serif;;
+	font-weight:bold;
+}
+.actionbutton2:hover{
+	animation:forwards buttoncol3 0.5s 1;
+}
+.imgdiv{
+float:right;
+width:37%;
+height:auto;
+display:inline-block;
+position:relative;
+float:right;
+padding:20px;
+}
+    #sidenav{
+    	left:10px;
+        bottom:40px;
+        position:fixed;
+        display:inline-block;
+        float:left;
+        width:200px;
+        height: 75%;
+        overflow:auto;
+        background-color:rgba(220,220,220,0.7);
+        box-shadow:1px 1px 3px 4px rgba(220,220,220,0.7);
+        z-index:1000
+    }
+    .arrow {
+  		margin: 1em;
+	}
+
+	.arrow::before {
+  		position: absolute;
+  		content: '';
+  		width: 0;
+  		height: 0;
+  		border: .5em solid transparent;
+  		border-left-color: grey;
+  		transform-origin: 0 50%;
+  		transition: transform .25s;
+	}
+
+	.arrow.down::before {
+  		transform: rotate(180deg);
+  		transition: transform .25s;
+	}
+    #nametop{
+    	font-family:Brush Script MT, Brush Script Std, cursive;
+        font-size:45px;
+        font-weight:900;
+        color:purple;
+        padding:0px; 
+	text-align:center;
+    }
+    .fade {
+ 	animation:forwards fadein 2s 1;
+        opacity: 0;
+        z-index:2;
+	font-family:Trebuchet MS;
+	}
+	.fade2 {
+ 	animation:forwards fadein 2s 1;
+	animation-delay:1s;
+        opacity: 0;
+	font-family:Trebuchet MS;
+        z-index:2;
+	}
+    @media only screen and (max-width:950px){
+    	.barbutton {
+        width:13.684%;
+        }
+        #sidenav {
+          display:none;
+        }
+    }
+    @media only screen and (max-width:600px){
+    	#bruh{
+        	display:none;
+        }
+	}</style>
 </head>
 <body>
     	<div id=nametop>
