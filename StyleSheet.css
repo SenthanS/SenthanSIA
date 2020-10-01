@@ -57,8 +57,7 @@ border-radius:4px;color:blue;text-decoration:none;
 a:hover{background-color:white;}
     .parallax {
   		background-image: url("https://extension.unh.edu/sites/default/files/styles/2x_blog_main/public/field/image/maple-tree-in-park-110661300191011Zru.jpg?itok=Ma4-jMXY&timestamp=1567092160");
- 		height: 80%;
-		min-height:700px;
+		height:500px;
   		background-attachment: fixed;
  		background-position: center;
     	background-repeat: no-repeat;
