@@ -213,7 +213,7 @@ padding:20px;
   		transition: transform .25s;
 	}
     #nametop{
-    	font-family:Brush Script MT, Brush Script Std, cursive;
+    	font-family:"Courier New", Courier, monospace;
         font-size:45px;
         font-weight:900;
         color:purple;
